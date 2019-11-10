@@ -48,7 +48,9 @@ button:focus {
 button:hover,
 button:active {
   background: #ff3482;
-  border-color: #ff3482;
+  /* border-color: #ff3482; */
+  /* border-color: black; */
+  border: 2px solid black;
 }
 
 .card {

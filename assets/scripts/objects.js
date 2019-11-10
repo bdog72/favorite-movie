@@ -1,13 +1,30 @@
-console.log(123);
+const addMovieButton = document.querySelector('#add-movie-btn');
+const searchButton = document.querySelector('#search-btn');
 
-const person = {
-  name: 'Bozo',
-  age: 47,
-  hobbies: ['games', 'cooking'],
-  greet: function() {
-    console.log('Hello World');
+const movies = [];
+
+const addMovieHandler = () => {
+  const title = document.querySelector('#title').value;
+  const extraName = document.querySelector('#extra-name').value;
+  const extraValue = document.querySelector('#extra-value').value;
+
+  if (
+    title.trim() === '' ||
+    extraName.trim() === '' ||
+    extraValue.trim() === ''
+  ) {
+    return;
   }
+
+  const newMovie = {
+    info: {
+      title,
+      [extraName]: extraValue
+    },
+    id: Math.random()
+  };
+  movies.push(newMovie);
+  console.log(newMovie);
 };
 
-console.log(person);
-console.log(person.greet());
+addMovieButton.addEventListener('click', addMovieHandler);
