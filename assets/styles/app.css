@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -90,4 +91,5 @@ button:active {
   color: #ff0062;
   font-weight: bold;
   font-size: 1.5rem;
+  font-family: 'Yeon Sung', cursive;
 }
